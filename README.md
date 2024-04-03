@@ -1,0 +1,2 @@
+# uwuzu-serverlist
+uwuzuサーバーリスト(New!)
