@@ -265,13 +265,16 @@ main .toukei .flexbox .about .p2{
     text-align: right;
     margin-right: 0px;
     height: fit-content;
+    padding-top: 4px;
+    padding-bottom: 4px;
     padding-left: 8px;
     padding-right: 8px;
     color: #FFFFFF;
     background-color: #FF4848;
     border: none;
     border-radius: 15px;
-    font-size: 0.8em;
+    font-size: 14px;
+    font-family: 'BIZ UDGothic', sans-serif;
 }
 .mes_textbox{
     background-color: #FEFEFE;
