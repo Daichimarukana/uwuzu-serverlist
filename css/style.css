@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Zen+Maru+Gothic:wght@400;500&display=swap');
+body{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    background-color: #FFFFFF;
+}
+
+header{
+    margin-top: 0px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 250ms ease-out;
+    border-bottom: solid 1px #FFC832;
+}
+.header_hw{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+}
+
+header .view{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 14%;
+    margin-right: 14%;
+    display: flex;
+}
+
+header .logo{
+    width: fit-content;
+    display: flex;
+
+}
+
+header .logo img{
+    height: 48px;
+}
+
+
+header .logo p{
+    color:#252525;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header a{
+    text-decoration:none;
+    color: #252525;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0px;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.pagetop{
+    width: 70%;
+    margin-top: 20dvh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20dvh;
+}
+.pagetop .rightzone{
+    margin-left: auto;
+    margin-right: 0px;
+    text-align: right;
+}
+.pagetop .logo img{
+    width: 20%;
+    filter:drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05));
+}
+.pagetop h1{
+    text-decoration:none;
+    color: #252525;
+    font-weight: bold;
+    font-size: 64px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    text-align: right;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+.pagetop h3{
+    line-height: 32px;
+    text-decoration:none;
+    color: #252525;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    text-align: right;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+.pagetop p{
+    line-height: 24px;
+    text-decoration:none;
+    color: #999;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    text-align: right;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+main{
+    margin-top: 48px;
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+    padding: 12px;
+    border-radius: 17px;
+}
+.its_main{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+main h1{
+    margin-left: 0px;
+    text-decoration:none;
+    color: #252525;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    text-align: left;
+}
+main p{
+    line-height: 24px;
+    margin-left: 0px;
+    text-decoration:none;
+    color: #252525;
+    font-weight: normal;
+    font-size: 18px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    text-align: left;
+}
+main a{
+    text-decoration: none;
+    color: #012f7b;
+}
+main a:hover{
+    text-decoration: underline;
+    color: #012f7b;
+}
+
+main .toukei{
+    background-color: #FEFEFE;
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    max-height: 120px;
+    overflow: scroll;
+    scrollbar-width: none;
+    transition: all 250ms ease-out;
+}
+main .toukei:hover{
+    background-color: #FFFFFF;
+    box-shadow: 0 0px 48px 0 rgba(0, 0, 0, .05);
+}
+main .toukei h3{
+    margin: 0px;
+    text-decoration:none;
+    color: #252525;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'BIZ UDGothic', sans-serif;
+    text-align: left;
+}
+main .toukei .flexbox{
+    display: flex;
+}
+main .toukei .flexbox .about{
+    margin-top: 12px;
+    width: 50%;
+    height: fit-content;
+}
+main .toukei .flexbox .about p{
+    line-height: 40px;
+    margin: 0px;
+    font-size: 32px;
+    color:#252525;
+    text-decoration: none;
+    font-family: 'BIZ UDGothic', sans-serif;
+    font-weight: normal;
+}
+main .toukei .flexbox .about .p2{
+    margin: 0px;
+    font-size: 12px;
+    color:#999;
+    text-decoration: none;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: normal;
+}
+.irobutton{
+    cursor: pointer;
+    border: none;
+    display: block;
+    width:40%;
+    margin: 12px;
+    padding: 8px 5%;
+    margin-left: 6px;
+    margin-right:6px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    background-color: #FFC832;
+
+    text-align: center;
+    border-radius: 50px;
+    color:#fff;
+    font-size: 22px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: normal;
+    text-decoration:none;
+    text-align: center;
+    box-shadow:0 0px 48px 0 rgba(0, 0, 0, .15);
+    transition: box-shadow 250ms ease-in-out;
+    transition: width 250ms ease-out;
+}
+.irobutton:hover{
+    box-shadow:0 0px 48px 0 rgba(0, 0, 0, .2);
+    width:42%;
+}
+.irobutton:active{
+    box-shadow:0 0px 48px 0 rgba(0, 0, 0, .05);
+    width:38%;
+}
+
+.icon_and_s_namebox{
+    display: flex;
+    margin-bottom: 6px;
+    width: 100%;
+}
+.icon_and_s_namebox .icon{
+    display: block;
+}
+.icon_and_s_namebox .icon img{
+    min-width: 64px;
+    min-height: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    border-radius: 7px;
+}
+.icon_and_s_namebox .s_namebox{
+    margin-left: 12px;
+    display: block;
+}
+.icon_and_s_namebox .invitation_code{
+    margin-left: auto;
+    text-align: right;
+    margin-right: 0px;
+    height: fit-content;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #FFFFFF;
+    background-color: #FF4848;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+.mes_textbox{
+    background-color: #FEFEFE;
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    max-height: 200px;
+    overflow: scroll;
+    scrollbar-width: none;
+    transition: all 250ms ease-out;
+}
+.mes_textbox:hover{
+    background-color: #FFFFFF;
+    box-shadow: 0 0px 48px 0 rgba(0, 0, 0, .05);
+}
+.mes_textbox:hover h3 a{
+    text-decoration: underline;
+}
+.mes_textbox::-webkit-scrollbar{
+    display: none;
+}
+.mes_textbox h2{
+    line-height: 36px;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-family: 'BIZ UDGothic', sans-serif;
+}
+.mes_textbox h3{
+    line-height: 20px;
+    font-size: 20px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-family: 'BIZ UDPGothic', sans-serif;
+}
+.mes_textbox h3 a{
+    text-decoration: none;
+    color: #012f7b;
+    transition: all 250ms ease-out;
+    overflow-wrap: normal;
+}
+.mes_textbox p{
+    line-height: 20px;
+    font-size:16px;
+    margin: 0px;
+    font-family: 'BIZ UDPGothic', sans-serif;
+}
+  
+hr{
+    height: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #CCC;
+}
+.mes_textbox .btmzone{
+    display: flex;
+}
+.mes_textbox .btmzone .left{
+    display: flex;
+    margin-left: 0px;
+    margin-right: auto;
+}
+.mes_textbox .btmzone .left .about{
+    min-width: 64px;
+    margin-right: 12px;
+}
+.mes_textbox .btmzone .left .about p{
+    line-height:22px;
+    overflow-wrap: break-word;
+    font-size: 20px;
+    color:#252525;
+    text-decoration: none;
+    font-family: 'BIZ UDGothic', sans-serif;
+    font-weight: normal;
+}
+.mes_textbox .btmzone .left .about .p2{
+    line-height:14px;
+    overflow-wrap: break-word;
+    font-size: 10px;
+    color:#999;
+    text-decoration: none;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: normal;
+}
+
+.mes_textbox .btmzone .right{
+    display: flex;
+    margin-left: auto;
+    margin-right: 0px;
+}
+.mes_textbox .btmzone .right .server{
+    margin: auto;
+    min-width: 128px;
+    border: none;
+    margin-right: 0px;
+    margin-left: 12px;
+}
+.mes_textbox .btmzone .right .server p{
+    line-height:22px;
+    overflow-wrap: break-word;
+    font-size: 20px;
+    color:#252525;
+    text-decoration: none;
+    font-family: 'BIZ UDGothic', sans-serif;
+    font-weight: normal;
+}
+.mes_textbox .btmzone .right .server .p2{
+    line-height:14px;
+    overflow-wrap: break-word;
+    font-size: 10px;
+    color:#999;
+    text-decoration: none;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: normal;
+}
+footer{
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    display: flex;
+}
+footer a {
+    text-align: left;
+    font-size: 16px;
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-weight: normal;
+    color: #f51f75;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 8px;
+}
+footer .uwuzu{
+    color: #252525;
+    transition: all 250ms ease-out;
+}
+footer .uwuzu:hover{
+    color: #FFC832;
+}
+.loading {
+    text-align: center;
+    font-size: 48px;
+    animation: rotate 0.5s infinite linear;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width: 1080px){
+    header .view{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 12px;
+        margin-right: 12px;
+        display: flex;
+    }
+    main{
+        width: auto;
+    }
+    .mes_textbox{
+        max-height: 300px;
+    }
+    .mes_textbox .btmzone{
+        display: block;
+    }
+    .mes_textbox .btmzone .right{
+        margin-top: 6px;
+        display: flex;
+        margin-left: 0px;
+        margin-right: auto;
+    }
+    .mes_textbox .btmzone .right .server{
+        margin-right: 12px;
+        margin-left: 0px;
+    }
+    footer{
+        width: auto;
+    }
+}

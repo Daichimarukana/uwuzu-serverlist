@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<link rel="apple-touch-icon" type="image/png" href="img/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="img/favicon/icon-192x192.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>uwuzuサーバーリスト</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="view">
+        <div class="logo">
+            <img src="img/uwuzucolorlogo.svg">
+            <p>ServerList</p>
+        </div>
+        <a href="https://www.uwuzu.com/">uwuzu公式サイト</a>
+    </div>
+</header>
+<main>
+    <h1>サーバーリスト</h1>
+    <p>※このページは試験的なものです。<br>正しく動作しない場合は<a href="https://www.uwuzu.com/docs/uwuzuserver/serverlist/">従来の物</a>をご利用ください。</p>
+    <p>このページではuwuzuを導入済みのサーバーをリストとして公開しています！<br>
+        サーバー管理者様より掲載をご希望される場合はだいちまるのDiscordやTwitter DM、メールまでお願いします。</p>
+    <p>このページにすべてのuwuzuサーバーが掲載されているとは限りません。<br>
+        サーバーのAPIに接続できない場合はエラーが表示されます。</p>
+    <div id="loading" class="loading" style="display: none;">
+        🤔
+    </div>
+    <div id="All" class="toukei" style="display: none;">
+        <h3>uwuzu全体の統計情報</h3>
+        <div class="flexbox">
+            <div class="about">
+                <div class="p2">ユーザー数</div>
+                <p id="All_users"></p>
+            </div>
+            <div class="about">
+                <div class="p2">ユーズ数</div>
+                <p id="All_ueuse"></p>
+            </div>
+            <div class="about">
+                <div class="p2">サーバー数</div>
+                <p id="All_server"></p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <a href="https://daichimarukana.com">© 2022 - 2024 daichimarukana</a>
+    <a href="https://www.uwuzu.com/" class="uwuzu">uwuzu</a>
+</footer>
+</body>
+<script>
+window.onload = function() {
+    $("#loading").show();
+    fetch('/serverlist.json')
+        .then(response => response.text())
+        .then(json => {
+            const new_json = JSON.parse(json);
+            console.log(new_json);
+            serverlist = new_json.serverlist;
+
+            var cnt = 0;
+            var all_user = 0;
+            var all_ueuse = 0;
+            var all_server = 0;
+            for (cnt in serverlist) {
+                console.log(serverlist[cnt]);
+                const server_domain = serverlist[cnt];
+                $.ajaxSetup({ async: false });
+                $.getJSON("https://"+server_domain+"/api/serverinfo-api", function(data){
+                    
+                    console.log(data.server_info.server_name)
+
+                    if(data.server_info.invitation_code == true){
+                        var invitation_code = '<div class="invitation_code">招待コード必須</div>';
+                    }else{
+                        var invitation_code = '';
+                    }
+                    if(data.server_info.server_icon.length){
+                        var server_icon_img = '<img src="'+data.server_info.server_icon+'">';
+                    }else{
+                        var server_icon_img = '<img src="/img/uwuzuicon.png">';
+                    }
+                    var html = 
+                    '<div class="mes_textbox">'+
+                        '<div class="icon_and_s_namebox">'+
+                            '<div class="icon">'+server_icon_img+''+
+                            '</div>'+
+                            '<div class="s_namebox">'+
+                                '<h2>'+data.server_info.server_name+'</h2>'+
+                                '<h3><a href="https://'+server_domain+'">'+server_domain+'</a></h3>'+
+                            '</div>'+invitation_code+''+
+                        '</div>'+
+                        '<h3>説明</h3>'+
+                        '<p>'+data.server_info.server_description+'</p>'+
+                        '<hr>'+
+                        '<div class="btmzone">'+
+                            '<div class="left">'+
+                                '<div class="about">'+
+                                    '<div class="p2">ユーザー数</div>'+
+                                    '<p>'+data.server_info.usage.users+'</p>'+
+                                '</div>'+
+                                '<div class="about">'+
+                                    '<div class="p2">ユーズ数</div>'+
+                                    '<p>'+data.server_info.usage.ueuse+'</p>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="right">'+
+                                '<div class="server">'+
+                                    '<div class="p2">サーバー情報</div>'+
+                                    '<p>'+data.software.name+' '+data.software.version+'</p>'+
+                                '</div>'+
+                                '<div class="server">'+
+                                    '<div class="p2">管理者</div>'+
+                                    '<p>'+data.server_info.adminstor.name+'</p>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>';
+                    $('main').append(html);
+                    all_user = all_user + data.server_info.usage.users;
+                    all_ueuse = all_ueuse + data.server_info.usage.ueuse;
+                })
+                .fail(function(jqXHR, textStatus, errorThrown) {
+                    var html = 
+                    '<div class="mes_textbox">'+
+                        '<div class="icon_and_s_namebox">'+
+                            '<div class="icon">'+
+                                '<img src="/img/error.png">'+
+                            '</div>'+
+                            '<div class="s_namebox">'+
+                                '<h2>Error</h2>'+
+                                '<h3><a href="https://'+server_domain+'">'+server_domain+'</a></h3>'+
+                            '</div>'+
+                        '</div>'+
+                        '<h3>説明</h3>'+
+                        '<p>データの取得ができませんでした<br><br>HTTPステータスコード : '+jqXHR.status+'</p>';
+                    '</div>';
+                    $('main').append(html);
+                })
+                all_server = serverlist.length;
+            }
+            $('#All_users').html(''+all_user+'');
+            $('#All_ueuse').html(''+all_ueuse+'');
+            $('#All_server').html(''+all_server+'');
+            $("#loading").hide();
+            $("#All").show();
+        });
+}
+</script>
+</html>
