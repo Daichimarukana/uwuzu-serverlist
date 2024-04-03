@@ -59,7 +59,6 @@ window.onload = function() {
         .then(response => response.text())
         .then(json => {
             const new_json = JSON.parse(json);
-            console.log(new_json);
             serverlist = new_json.serverlist;
 
             var cnt = 0;
@@ -67,12 +66,9 @@ window.onload = function() {
             var all_ueuse = 0;
             var all_server = 0;
             for (cnt in serverlist) {
-                console.log(serverlist[cnt]);
                 const server_domain = serverlist[cnt];
                 $.ajaxSetup({ async: false });
                 $.getJSON("https://"+server_domain+"/api/serverinfo-api", function(data){
-                    
-                    console.log(data.server_info.server_name)
 
                     if(data.server_info.invitation_code == true){
                         var invitation_code = '<div class="invitation_code">招待コード必須</div>';
