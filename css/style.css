@@ -11,7 +11,7 @@ body{
 header{
     margin-top: 0px;
     width: 100%;
-    backdrop-filter: blur(10px);
+    background-color: #FFFAE6;
     height: auto;
     position: fixed;
     top: 0;
@@ -20,16 +20,13 @@ header{
     transition: all 250ms ease-out;
     border-bottom: solid 1px #FFC832;
 }
-.header_hw{
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
-}
 
 header .view{
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 14%;
-    margin-right: 14%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1080px;
     display: flex;
 }
 
@@ -67,55 +64,9 @@ header a{
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 }
 
-.pagetop{
-    width: 70%;
-    margin-top: 20dvh;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20dvh;
-}
-.pagetop .rightzone{
-    margin-left: auto;
-    margin-right: 0px;
-    text-align: right;
-}
-.pagetop .logo img{
-    width: 20%;
-    filter:drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.05));
-}
-.pagetop h1{
-    text-decoration:none;
-    color: #252525;
-    font-weight: bold;
-    font-size: 64px;
-    font-family: 'BIZ UDGothic', sans-serif;
-    text-align: right;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-}
-.pagetop h3{
-    line-height: 32px;
-    text-decoration:none;
-    color: #252525;
-    font-weight: bold;
-    font-size: 24px;
-    font-family: 'BIZ UDGothic', sans-serif;
-    text-align: right;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-}
-.pagetop p{
-    line-height: 24px;
-    text-decoration:none;
-    color: #999;
-    font-weight: normal;
-    font-size: 16px;
-    font-family: 'BIZ UDGothic', sans-serif;
-    text-align: right;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-}
-
 main{
     margin-top: 48px;
-    width: 72%;
+    width: 1080px;
     margin-left: auto;
     margin-right: auto;
     background-color: #FFF;
@@ -396,7 +347,7 @@ hr{
     font-weight: normal;
 }
 footer{
-    width: 72%;
+    width: 1080px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 12px;
@@ -461,5 +412,6 @@ footer .uwuzu:hover{
     }
     footer{
         width: auto;
+        margin-left: 12px;
     }
 }
