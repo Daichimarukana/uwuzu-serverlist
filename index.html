@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="apple-touch-icon" type="image/png" href="img/favicon/apple-touch-icon-180x180.png">
 <link rel="icon" type="image/png" href="img/favicon/icon-192x192.png">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -26,6 +27,7 @@
         サーバー管理者様より掲載をご希望される場合はだいちまるのDiscordやTwitter DM、メールまでお願いします。</p>
     <p>このページにすべてのuwuzuサーバーが掲載されているとは限りません。<br>
         サーバーのAPIに接続できない場合はエラーが表示されます。</p>
+    <p>統計情報及びサーバーの情報は1時間に1度更新されます！(過去の統計情報は月単位で記録していたものが含まれます。記録のない空白期間も含まれます。)</p>
     <div id="loading" class="loading" style="display: none;">
         🤔
     </div>
@@ -46,6 +48,17 @@
             </div>
         </div>
     </div>
+
+    <div class="flexbox">
+        <div class="chart_line">
+            <canvas id="growthChart" width="300px" height="300px"></canvas>
+        </div>
+        <div class="chart_circle">
+            <canvas id="shareChart" width="300px" height="300px"></canvas>
+        </div>
+    </div>
+    
+
 </main>
 <footer>
     <a href="https://daichimarukana.com">© 2022 - 2024 daichimarukana</a>
@@ -55,95 +68,157 @@
 <script>
 window.onload = function() {
     $("#loading").show();
-    fetch('/serverlist.json')
-        .then(response => response.text())
-        .then(json => {
-            const new_json = JSON.parse(json);
-            serverlist = new_json.serverlist;
+    fetch('/stats.json')
+        .then(response => response.json())
+        .then(data => {
+            $('#All_users').text(data.all_user);
+            $('#All_ueuse').text(data.all_ueuse);
+            $('#All_server').text(data.all_server);
 
-            var cnt = 0;
-            var all_user = 0;
-            var all_ueuse = 0;
-            var all_server = 0;
-            for (cnt in serverlist) {
-                const server_domain = serverlist[cnt];
-                $.ajaxSetup({ async: false });
-                $.getJSON("https://"+server_domain+"/api/serverinfo-api", function(data){
+            data.servers.sort((a, b) => {
+                const usersA = a.data ? a.data.server_info.usage.users : 0;
+                const usersB = b.data ? b.data.server_info.usage.users : 0;
+                return usersB - usersA;
+            });
 
-                    if(data.server_info.invitation_code == true){
-                        var invitation_code = '<div class="invitation_code">招待コード必須</div>';
-                    }else{
-                        var invitation_code = '';
+            const validServers = data.servers.filter(s => s.data !== null);
+            const labels = validServers.map(s => s.domain);
+            const userCounts = validServers.map(s => s.data.server_info.usage.users);
+            const ctxShare = document.getElementById('shareChart').getContext('2d');
+            new Chart(ctxShare, {
+                type: 'pie',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: userCounts,
+                        backgroundColor: [
+                            '#FFC832', '#FFC832aa', '#FFC83255', '#FFC83211'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    let value = context.raw || 0;
+                                    let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    let percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value}人 (${percentage}%)`;
+                                }
+                            }
+                        }
                     }
-                    if(data.server_info.server_icon.length){
-                        var server_icon_img = '<img src="'+data.server_info.server_icon+'">';
-                    }else{
-                        var server_icon_img = '<img src="/img/uwuzuicon.png">';
-                    }
-                    var html = 
-                    '<div class="mes_textbox">'+
-                        '<div class="icon_and_s_namebox">'+
-                            '<div class="icon">'+server_icon_img+''+
-                            '</div>'+
-                            '<div class="s_namebox">'+
-                                '<h2>'+data.server_info.server_name+'</h2>'+
-                                '<h3><a href="https://'+server_domain+'">'+server_domain+'</a></h3>'+
-                            '</div>'+invitation_code+''+
-                        '</div>'+
-                        '<h3>説明</h3>'+
-                        '<p>'+data.server_info.server_description+'</p>'+
-                        '<hr>'+
-                        '<div class="btmzone">'+
-                            '<div class="left">'+
-                                '<div class="about">'+
-                                    '<div class="p2">ユーザー数</div>'+
-                                    '<p>'+data.server_info.usage.users+'</p>'+
-                                '</div>'+
-                                '<div class="about">'+
-                                    '<div class="p2">ユーズ数</div>'+
-                                    '<p>'+data.server_info.usage.ueuse+'</p>'+
-                                '</div>'+
-                            '</div>'+
-                            '<div class="right">'+
-                                '<div class="server">'+
-                                    '<div class="p2">サーバー情報</div>'+
-                                    '<p>'+data.software.name+' '+data.software.version+'</p>'+
-                                '</div>'+
-                                '<div class="server">'+
-                                    '<div class="p2">管理者</div>'+
-                                    '<p>'+data.server_info.adminstor.name+'</p>'+
-                                '</div>'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>';
-                    $('main').append(html);
-                    all_user = all_user + data.server_info.usage.users;
-                    all_ueuse = all_ueuse + data.server_info.usage.ueuse;
-                })
-                .fail(function(jqXHR, textStatus, errorThrown) {
-                    var html = 
-                    '<div class="mes_textbox">'+
-                        '<div class="icon_and_s_namebox">'+
-                            '<div class="icon">'+
-                                '<img src="/img/error.png">'+
-                            '</div>'+
-                            '<div class="s_namebox">'+
-                                '<h2>Error</h2>'+
-                                '<h3><a href="https://'+server_domain+'">'+server_domain+'</a></h3>'+
-                            '</div>'+
-                        '</div>'+
-                        '<h3>説明</h3>'+
-                        '<p>データの取得ができませんでした<br><br>HTTPステータスコード : '+jqXHR.status+'</p>';
-                    '</div>';
-                    $('main').append(html);
-                })
-                all_server = serverlist.length;
-            }
-            $('#All_users').html(''+all_user+'');
-            $('#All_ueuse').html(''+all_ueuse+'');
-            $('#All_server').html(''+all_server+'');
+                }
+            });
+
+            data.servers.forEach(item => {
+                let html = '';
+                if (item.error) {
+                    html = `
+                    <div class="mes_textbox">
+                        <div class="icon_and_s_namebox">
+                            <div class="icon"><img src="/img/error.png"></div>
+                            <div class="s_namebox">
+                                <h2>Error</h2>
+                                <h3><a href="https://${item.domain}">${item.domain}</a></h3>
+                            </div>
+                        </div>
+                        <h3>説明</h3>
+                        <p>データの取得ができませんでした<br>Status: ${item.error}</p>
+                    </div>`;
+                } else {
+                    const info = item.data.server_info;
+                    const sw = item.data.software;
+                    const invitation = info.invitation_code ? '<div class="invitation_code">招待コード必須</div>' : '';
+                    const icon = info.server_icon ? info.server_icon : '/img/uwuzuicon.png';
+
+                    html = `
+                    <div class="mes_textbox">
+                        <div class="icon_and_s_namebox">
+                            <div class="icon"><img src="${icon}"></div>
+                            <div class="s_namebox">
+                                <h2>${info.server_name}</h2>
+                                <h3><a href="https://${item.domain}">${item.domain}</a></h3>
+                            </div>
+                            ${invitation}
+                        </div>
+                        <h3>説明</h3>
+                        <p>${info.server_description}</p>
+                        <hr>
+                        <div class="btmzone">
+                            <div class="left">
+                                <div class="about"><div class="p2">ユーザー数</div><p>${info.usage.users}</p></div>
+                                <div class="about"><div class="p2">ユーズ数</div><p>${info.usage.ueuse}</p></div>
+                            </div>
+                            <div class="right">
+                                <div class="server"><div class="p2">サーバー情報</div><p>${sw.name} ${sw.version}</p></div>
+                                <div class="server"><div class="p2">管理者</div><p>${info.adminstor.name}</p></div>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+                $('main').append(html);
+            });
+
             $("#loading").hide();
             $("#All").show();
+        });
+
+    fetch('/history.json')
+        .then(res => res.json())
+        .then(data => {
+            const ctx = document.getElementById('growthChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.date),
+                    datasets: [
+                        {
+                            label: '総ユーザー数',
+                            data: data.map(d => d.users),
+                            borderColor: '#56c138',
+                            backgroundColor: '#56c13811',
+                            yAxisID: 'y-users',
+                            tension: 0.0,
+                            fill: true
+                        },
+                        {
+                            label: '総ユーズ数',
+                            data: data.map(d => d.ueuse),
+                            borderColor: '#ffc832',
+                            backgroundColor: '#ffc83211',
+                            yAxisID: 'y-ueuse',
+                            tension: 0.0,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        'y-users': {
+                            type: 'linear',
+                            position: 'left',
+                            title: { display: true, text: 'ユーザー数' }
+                        },
+                        'y-ueuse': {
+                            type: 'linear',
+                            position: 'right',
+                            grid: { drawOnChartArea: false },
+                            title: { display: true, text: 'ユーズ数' }
+                        }
+                    }
+                }
+            });
         });
 }
 </script>
