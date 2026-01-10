@@ -1,0 +1,66 @@
+{
+  "all_user": 17,
+  "all_ueuse": 67,
+  "all_server": 3,
+  "servers": [
+    {
+      "domain": "dev.uwuzu.net",
+      "data": null,
+      "error": "HTTP 403"
+    },
+    {
+      "domain": "uwuzu.net",
+      "data": null,
+      "error": "HTTP 403"
+    },
+    {
+      "domain": "365sns2.f5.si",
+      "data": {
+        "server_info": {
+          "server_name": "365sns2",
+          "server_icon": "",
+          "server_description": "現在登録は受け付けています。 使用ソフトウェアはuwuzuというソフトウェアです。\r\nRe:365sns2",
+          "adminstor": {
+            "name": "m6qz,ムク",
+            "email": "365sns2@gmail.com"
+          },
+          "terms_url": "https://365sns2.f5.si/rule/terms",
+          "privacy_policy_url": "https://365sns2.f5.si/rule/privacypolicy",
+          "max_ueuse_length": 200,
+          "invitation_code": false,
+          "account_migration": true,
+          "usage": {
+            "users": 17,
+            "ueuse": 67
+          }
+        },
+        "software": {
+          "name": "uwuzu",
+          "version": "1.6.10",
+          "repository": "https://github.com/Daichimarukana/uwuzu"
+        },
+        "server_notice": [
+          {
+            "title": "Googleでログインについて",
+            "note": "日頃から365sns2をご利用いただきありがとうございます。\r\n近日中に365sns2にGoogleログインを実装します。\r\nよろしくおねがいします。\r\n365sns2 Development Team",
+            "editor": "support",
+            "datetime": "2025-12-19 14:37:30"
+          },
+          {
+            "title": "メンテナンスに関して",
+            "note": "日頃より365sns2をご利用いただきありがとうございます。\r\nTwitterログインについてなのですが、hCaptchaが無視できてしまうという欠陥が見つかったため、メンテナンスを行います。\r\n日付は以下のとおりです。\r\n2025年12月18日13時から、14時\r\n上記の時間帯でTwitterログインを修正するアプデを入れるため、Twitterログインが機能しません。\r\n大変申し訳ありませんが、ご了承いただけると幸いです。\r\n365sns2 Development Team",
+            "editor": "admin",
+            "datetime": "2025-12-17 23:18:57"
+          },
+          {
+            "title": "Oauthログインを実装！",
+            "note": "本日14:00からtwitterログインを実装します。\r\nなんなら現時点でも実装されていますが、正式実装ではありません。\r\nよろしくお願いします",
+            "editor": "admin",
+            "datetime": "2025-12-17 13:50:26"
+          }
+        ]
+      },
+      "error": null
+    }
+  ]
+}
