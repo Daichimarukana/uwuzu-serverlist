@@ -14,6 +14,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Retrieve previous data from data branch
+        run: |
+          git fetch origin data
+          git checkout origin/data -- history.json || echo "history.json not found, skipping..."
+          git checkout origin/data -- stats.json || echo "stats.json not found, skipping..."
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
