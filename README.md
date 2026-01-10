@@ -1,2 +1,2 @@
 # uwuzu-serverlist
-uwuzuサーバーリスト(New!)
+uwuzuサーバーリスト(さらにニュー)

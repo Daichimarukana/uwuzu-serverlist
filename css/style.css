@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Zen+Maru+Gothic:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Zen+Maru+Gothic:wght@400;500&family=Inter&display=swap');
 body{
     width: 100%;
     margin-top: 0px;
@@ -11,14 +11,30 @@ body{
 header{
     margin-top: 0px;
     width: 100%;
-    background-color: #FFFAE6;
+    background-color: transparent;
+    backdrop-filter: blur(10px) saturate(150%);
     height: auto;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
     transition: all 250ms ease-out;
-    border-bottom: solid 1px #FFC832;
+    border-bottom: solid 1px transparent;
+
+    animation: anim_header ease-out both;
+    animation-timeline: scroll();
+}
+
+@keyframes anim_header {
+    0% {
+        border-bottom: solid 1px transparent;
+    }
+    20% {
+        border-bottom: solid 1px #CCC;
+    }
+    100% {
+        border-bottom: solid 1px #CCC;
+    }
 }
 
 header .view{
@@ -27,6 +43,7 @@ header .view{
     margin-left: auto;
     margin-right: auto;
     width: 1080px;
+    height: 64px;
     display: flex;
 }
 
@@ -37,16 +54,17 @@ header .logo{
 }
 
 header .logo img{
+    margin: auto 0px;
     height: 48px;
 }
 
 
 header .logo p{
     color:#252525;
-    font-family: 'BIZ UDPGothic', sans-serif;
+    font-family: 'Inter','BIZ UDPGothic', sans-serif;
     font-weight: bold;
-    font-size: 24px;
-    margin-left: 8px;
+    font-size: 32px;
+    margin-left: 16px;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -54,14 +72,17 @@ header .logo p{
 header a{
     text-decoration:none;
     color: #252525;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 16px;
     font-family: 'BIZ UDGothic', sans-serif;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: 0px;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    transition: all 250ms ease-out;
+}
+header a:hover{
+    color: #FFC832;
 }
 
 main{
@@ -156,6 +177,45 @@ main .toukei .flexbox .about .p2{
     font-family: 'BIZ UDPGothic', sans-serif;
     font-weight: normal;
 }
+
+main .flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+main .chart_line{
+    background-color: #FEFEFE;
+    width: calc(70% - 38px);
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    overflow: scroll;
+    scrollbar-width: none;
+    transition: all 250ms ease-out;
+}
+main .chart_line:hover{
+    background-color: #FFFFFF;
+    box-shadow: 0 0px 48px 0 rgba(0, 0, 0, .05);
+}
+
+main .chart_circle{
+    background-color: #FEFEFE;
+    width: calc(30% - 38px);
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    overflow: scroll;
+    scrollbar-width: none;
+    transition: all 250ms ease-out;
+}
+main .chart_circle:hover{
+    background-color: #FFFFFF;
+    box-shadow: 0 0px 48px 0 rgba(0, 0, 0, .05);
+}
+
 .irobutton{
     cursor: pointer;
     border: none;
@@ -394,6 +454,18 @@ footer .uwuzu:hover{
     main{
         width: auto;
     }
+    main .flexbox{
+        display: block;
+    }
+    main .chart_line{
+        width: calc(100% - 26px);
+        height: 200px;
+    }
+    main .chart_circle{
+        width: calc(100% - 26px);
+        height: 200px;
+    }
+
     .mes_textbox{
         max-height: 300px;
     }

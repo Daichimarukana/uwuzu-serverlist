@@ -1,0 +1,244 @@
+{
+  "all_user": 4010,
+  "all_ueuse": 424773,
+  "all_server": 3,
+  "servers": [
+    {
+      "domain": "dev.uwuzu.net",
+      "data": {
+        "server_info": {
+          "server_name": "てすとさば",
+          "server_icon": "https://dev.uwuzu.net/img/dev_uwuzu.png",
+          "server_description": "招待コードひっす",
+          "adminstor": {
+            "name": "だいちまる",
+            "email": "daichimarukana@gmail.com"
+          },
+          "terms_url": "https://dev.uwuzu.net/rule/terms",
+          "privacy_policy_url": "https://dev.uwuzu.net/rule/privacypolicy",
+          "max_ueuse_length": 1024,
+          "invitation_code": true,
+          "account_migration": true,
+          "usage": {
+            "users": 35,
+            "ueuse": 1051
+          }
+        },
+        "software": {
+          "name": "uwuzu",
+          "version": "1.6.11",
+          "repository": "https://github.com/Daichimarukana/uwuzu"
+        },
+        "server_notice": [
+          {
+            "title": "めんてする",
+            "note": "しばらくつかえません",
+            "editor": "daichimarukana",
+            "datetime": "2025-02-08 21:52:22"
+          },
+          {
+            "title": "ちょっとサーバーお引越ししました",
+            "note": "同じく自宅鯖ですが複数あるサーバーのうちの別の自宅鯖に移行しました。\r\nもし不具合等ございましたらお問い合わせください。\r\n前使用していたサーバーからはデータをすべて削除しています。",
+            "editor": "daichimarukana",
+            "datetime": "2024-08-19 22:27:08"
+          },
+          {
+            "title": "アカウントのセキュリティ、大丈夫ですか？",
+            "note": "かなり過疎っててもはや攻撃とかされなさそうなレベルで過疎ってるこのサーバーですが、\r\n油断は禁物です！！！\r\n\r\nお使いのアカウントに二段階認証は設定されていますか？🤔\r\n二段階認証というのは面倒な作業ではありますが、本人のログインを確認するには重要な手法です！\r\nこのお知らせを機に、一度パスワードと二段階認証の設定を見直してみませんか？！🫵",
+            "editor": "daichimarukana",
+            "datetime": "2024-04-26 02:23:00"
+          },
+          {
+            "title": "プライバシーポリシー変更のお知らせ",
+            "note": "普段よりdev.uwuzu.netをご利用いただきありがとうございます！\r\nこの度プライバシーポリシーの変更があるためお知らせいたします。\r\n\r\n変更点は以下の項目です。\r\n6. 個人情報の訂正・開示及び削除\r\n\"※注意:投稿に添付される動画や写真データは投稿を削除してもアカウント削除までサーバーに残り続けます。\"が\"なし\"になります。\r\nこれはuwuzuの仕様変更になりユーズの削除と同時に添付されてるファイルも削除されるようになったためです。\r\n\r\n4. 個人情報の第三者提供\r\n\"下記の木定期\"が\"下記の目的\"に変更されます。\r\nこれは誤字の訂正になります。\r\n\r\n2024/03/29よりこのプライバシーポリシーはサーバーにいる全ユーザーに適用されます。\r\n今後ともdev.uwuzu.netをよろしくお願いいたします！",
+            "editor": "daichimarukana",
+            "datetime": "2024-03-29 14:35:06"
+          },
+          {
+            "title": "サーバー移行完了のお知らせ",
+            "note": "dev.uwuzu.netのサーバー移行作業が完了しました！\r\n今まで通り使用が可能かと思われます。\r\nもし不具合等ございましたら私だいちまるまでご連絡いただけますと幸いです。\r\n今後ともdev.uwuzu.netをよろしくお願いいたします",
+            "editor": "daichimarukana",
+            "datetime": "2024-03-10 12:07:10"
+          },
+          {
+            "title": "サーバー移行に関してのお知らせ",
+            "note": "これまで当サーバーはレンタルサーバーを使用していましたが、独自のサーバーを用意できたためそちらに移行しようと考えています。\r\nサーバー移行に実施日は2024/03/10 - 2024/03/11を予定しています。\r\nユーザー様に特別な操作は必要ありませんが、uwuzuを利用できない時間があることをご了承ください。\r\nご理解とご協力のほどよろしくお願いいたします。",
+            "editor": "daichimarukana",
+            "datetime": "2024-03-09 14:05:17"
+          },
+          {
+            "title": "サービスステータスページ運用開始のお知らせ",
+            "note": "https://dev.uwuzu.net 及び https://uwuzu.com 、 https://uwuzu.net のサービスステータスページの運用を開始しました！\nhttps://stats.uptimerobot.com/rxBNRCw72E",
+            "editor": "daichimarukana",
+            "datetime": "2023-12-27 16:38:51"
+          },
+          {
+            "title": "サーバー一時停止のお知らせ",
+            "note": "2023年11月29日の23:00から2023年11月30日の03:00までの間、お借りしているレンタルサーバー会社様によりサーバーメンテナンスが行われます。\r\nそれによりその期間中はdev.uwuzu.netはサーバー停止いたします。\r\nユーザー様にはご迷惑をおかけしますがご了承ください。",
+            "editor": "daichimarukana",
+            "datetime": "2023-11-09 19:11:35"
+          },
+          {
+            "title": "ご寄付の受付開始のお知らせ",
+            "note": "いつもdev.uwuzu.netのご利用、そしてuwuzuの開発に貢献していただきありがとうございます。\r\nあまり行いたくないことなのですが、本サーバーの運営費の寄付の受付を始めさせていただきます。\r\n詳細は以下のURLよりどうぞ。\r\nhttps://daichimarukana.com/#area-5",
+            "editor": "daichimarukana",
+            "datetime": "2023-10-15 22:19:37"
+          },
+          {
+            "title": "Discord鯖開設のお知らせ",
+            "note": "uwuzu部というまぁ開発用Discordサーバー的なものを立てました～！\r\nここではuwuzuの今後や新機能についてなどを話していこうかと思っております。\r\ndev.uwuzu.netにいるユーザーの皆さんよければ参加してください！！！\r\nhttps://discord.gg/MuWBewqBEU",
+            "editor": "daichimarukana",
+            "datetime": "2023-09-19 01:06:08"
+          },
+          {
+            "title": "脆弱性とバグについてのお知らせ Part2",
+            "note": "あっ!!!\r\n今これの下にあるお知らせに書いてあること修正済みです！！！",
+            "editor": "daichimarukana",
+            "datetime": "2023-09-18 22:41:22"
+          },
+          {
+            "title": "脆弱性とバグについてのお知らせ",
+            "note": "現在脆弱性を修正したところ投稿の削除やいいね、追記が正常に動作しなくなっていることを確認いたしました。\r\nご迷惑かと思われますが修正まで今しばらくお待ち下さい。\r\nまた、症状が出ていな方は私だいちまるまでご連絡ください。",
+            "editor": "daichimarukana",
+            "datetime": "2023-09-06 01:15:30"
+          },
+          {
+            "title": "お知らせ",
+            "note": "uwuzu version 1.2.11でアカウント画像及びヘッダー画像の保存形式が変わりました！\r\nそのため全てのアカウントでアイコンが標準のものに戻っております。\r\nお手数ですが再度設定画面よりアカウント画像を設定してください！\r\n使える画像形式等に変更はありません。\r\nご迷惑をおかけします。",
+            "editor": "daichimarukana",
+            "datetime": "2023-08-25 00:59:10"
+          },
+          {
+            "title": "バグ修正のお知らせ",
+            "note": "強引になおしました。",
+            "editor": "daichimarukana",
+            "datetime": "2023-08-21 13:51:54"
+          },
+          {
+            "title": "ログイン時のバグについて",
+            "note": "現在なぜかはわかりませんがCookieが上書きされずに追加される症状を(Firefox)確認しました。\r\nこれによりログアウトボタンを押しても正常にログアウトされず、再読み込みするとまたホーム画面に戻ってしまう症状が確認されました。バグ修正までの間、ログアウトはご自身の端末のCookieを削除して行ってください。ご迷惑をおかけします。\r\n\r\n",
+            "editor": "daichimarukana",
+            "datetime": "2023-08-21 01:54:36"
+          },
+          {
+            "title": "バグ修正のお知らせ",
+            "note": "先程の問題ですが、DBの構造の問題でした。\r\n修正が終わりましたのでエラーなくご利用いただけます。\r\nご迷惑をおかけしました。",
+            "editor": "daichimarukana",
+            "datetime": "2023-08-19 02:02:47"
+          },
+          {
+            "title": "アップデートについてのお知らせ",
+            "note": "現在二段階認証を実装しこのサーバーでもuwuzuのバージョンを1.2.4に上げたのですが、設定画面とログイン画面にてエラー500が出てしまうバグがございます。\r\n修正は本日、日が昇ってから行いますのでそれまでの間しばらくお待ち下さい。\r\nご迷惑をおかけします。",
+            "editor": "daichimarukana",
+            "datetime": "2023-08-19 01:59:28"
+          },
+          {
+            "title": "てすとさばのサービスを開始しました。",
+            "note": "脆弱性探してみてください～",
+            "editor": "daichimarukana",
+            "datetime": "2023-08-18 13:08:43"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "domain": "365sns2.f5.si",
+      "data": {
+        "server_info": {
+          "server_name": "365sns2",
+          "server_icon": "",
+          "server_description": "現在登録は受け付けています。 使用ソフトウェアはuwuzuというソフトウェアです。\r\nRe:365sns2",
+          "adminstor": {
+            "name": "m6qz,ムク",
+            "email": "365sns2@gmail.com"
+          },
+          "terms_url": "https://365sns2.f5.si/rule/terms",
+          "privacy_policy_url": "https://365sns2.f5.si/rule/privacypolicy",
+          "max_ueuse_length": 200,
+          "invitation_code": false,
+          "account_migration": true,
+          "usage": {
+            "users": 17,
+            "ueuse": 67
+          }
+        },
+        "software": {
+          "name": "uwuzu",
+          "version": "1.6.10",
+          "repository": "https://github.com/Daichimarukana/uwuzu"
+        },
+        "server_notice": [
+          {
+            "title": "Googleでログインについて",
+            "note": "日頃から365sns2をご利用いただきありがとうございます。\r\n近日中に365sns2にGoogleログインを実装します。\r\nよろしくおねがいします。\r\n365sns2 Development Team",
+            "editor": "support",
+            "datetime": "2025-12-19 14:37:30"
+          },
+          {
+            "title": "メンテナンスに関して",
+            "note": "日頃より365sns2をご利用いただきありがとうございます。\r\nTwitterログインについてなのですが、hCaptchaが無視できてしまうという欠陥が見つかったため、メンテナンスを行います。\r\n日付は以下のとおりです。\r\n2025年12月18日13時から、14時\r\n上記の時間帯でTwitterログインを修正するアプデを入れるため、Twitterログインが機能しません。\r\n大変申し訳ありませんが、ご了承いただけると幸いです。\r\n365sns2 Development Team",
+            "editor": "admin",
+            "datetime": "2025-12-17 23:18:57"
+          },
+          {
+            "title": "Oauthログインを実装！",
+            "note": "本日14:00からtwitterログインを実装します。\r\nなんなら現時点でも実装されていますが、正式実装ではありません。\r\nよろしくお願いします",
+            "editor": "admin",
+            "datetime": "2025-12-17 13:50:26"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "domain": "uwuzu.net",
+      "data": {
+        "server_info": {
+          "server_name": "ゆずねっと",
+          "server_icon": "https://uwuzu.net/img/uwuzu_net_icon.png",
+          "server_description": "あなたの居場所にゆずねっと。\r\n\r\nどんな方でも、どんな話題で盛り上がりたい方でも！\r\nぜひゆずねっとへお越しください...！\r\n\r\nメールアドレスも、電話番号も、生年月日も、必要ありませんよ。\r\n\r\nuwuzuについてはこちら: docs.uwuzu.com",
+          "adminstor": {
+            "name": "だいちまる,ぷとん",
+            "email": "official@uwuzu.net"
+          },
+          "terms_url": "https://uwuzu.net/rule/terms",
+          "privacy_policy_url": "https://uwuzu.net/rule/privacypolicy",
+          "max_ueuse_length": 1024,
+          "invitation_code": false,
+          "account_migration": true,
+          "usage": {
+            "users": 3958,
+            "ueuse": 423655
+          }
+        },
+        "software": {
+          "name": "uwuzu",
+          "version": "1.6.11",
+          "repository": "https://github.com/Daichimarukana/uwuzu"
+        },
+        "server_notice": [
+          {
+            "title": "ゆずねっとに関する公式サイトについて",
+            "note": "ゆずねっとが公式で運営している他のSNSのアカウントや公式サポートサイト、サービスステータスなどのURLです！\r\n随時更新しますので是非ご活用ください！！\r\nTwitter(現X): https://x.com/uwuzu_net\r\nサポートサイト: https://support.uwuzu.net/\r\nサービスステータス: https://status.uwuzu.net/",
+            "editor": "daichimarukana",
+            "datetime": "2025-06-03 23:36:28"
+          },
+          {
+            "title": "📢利用規約を改定しました",
+            "note": "利用規約を改定いたしましたのでユーザーの皆様はご確認ください。\r\nhttps://uwuzu.net/rule/terms",
+            "editor": "daichimarukana",
+            "datetime": "2025-01-04 16:19:07"
+          },
+          {
+            "title": "🎉ゆずねっとのサービスを開始しました！🎉",
+            "note": "ゆずねっとのサービスを開始しました！🎉🎉🎉\r\nこの自由なSNSを思う存分お楽しみにください！\r\n(利用規約とプライバシーポリシーはまもってね)\r\n\r\nカスタム絵文字などの追加申請はリプとかお問い合わせとかでだいちまるまでお願いします！",
+            "editor": "daichimarukana",
+            "datetime": "2024-08-20 18:02:15"
+          }
+        ]
+      },
+      "error": null
+    }
+  ]
+}
