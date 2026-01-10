@@ -44,7 +44,7 @@ async function updateStats() {
     }
 
     history.push({
-        date: new Date().toLocaleString(),
+        date: new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' }),
         users: allUser,
         ueuse: allUeuse
     });
