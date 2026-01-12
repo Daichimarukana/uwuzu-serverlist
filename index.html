@@ -174,7 +174,19 @@ window.onload = function() {
 
     fetch('/history.json')
         .then(res => res.json())
-        .then(data => {
+        .then(rawData => {
+            const monthlyData = [];
+            const seenMonths = new Set();
+            [...rawData].reverse().forEach(d => {
+                const month = d.date.substring(0, 7);
+                if (!seenMonths.has(month)) {
+                    seenMonths.add(month);
+                    monthlyData.push(d);
+                }
+            });
+
+            const data = monthlyData.reverse();
+
             const ctx = document.getElementById('growthChart').getContext('2d');
             new Chart(ctx, {
                 type: 'line',
