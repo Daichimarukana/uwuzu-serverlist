@@ -1,0 +1,44 @@
+name: Update uwuzu Statistics
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Retrieve previous data from data branch
+        run: |
+          git fetch origin data
+          git checkout origin/data -- history.json || echo "history.json not found, skipping..."
+          git checkout origin/data -- stats.json || echo "stats.json not found, skipping..."
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run update script
+        run: node update_stats.js
+
+      - name: Deploy data to separate branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: data
+          exclude_assets: '.github,update_stats.js,package.json,package-lock.json'
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Update statistics data'
