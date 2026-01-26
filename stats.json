@@ -1,6 +1,6 @@
 {
-  "all_user": 4109,
-  "all_ueuse": 442671,
+  "all_user": 4116,
+  "all_ueuse": 444170,
   "all_server": 3,
   "servers": [
     {
@@ -159,8 +159,8 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 4049,
-            "ueuse": 441505
+            "users": 4056,
+            "ueuse": 443004
           }
         },
         "software": {
@@ -205,7 +205,7 @@
           "terms_url": "https://365sns2.f5.si/rule/terms",
           "privacy_policy_url": "https://365sns2.f5.si/rule/privacypolicy",
           "max_ueuse_length": 200,
-          "invitation_code": false,
+          "invitation_code": true,
           "account_migration": true,
           "usage": {
             "users": 25,
@@ -218,6 +218,12 @@
           "repository": "https://github.com/Daichimarukana/uwuzu"
         },
         "server_notice": [
+          {
+            "title": "サービス終了のお知らせ",
+            "note": "日頃から365sns2のご利用ありがとうございます。\r\n本SNSは過疎化と開発のモチベがはっきり言って無いため、サービス終了をします。\r\nこのお知らせが配信されている時点で、ActivityPubと新規登録は停止されています。\r\n完全なるサービス終了は3月24日付でサービスを停止させていただいきます。\r\n本SNSのサービス終了後はサービス停止画面が表示されますので、ご利用いただけなくなります。\r\nご利用ありがとうございました。",
+            "editor": "admin",
+            "datetime": "2026-01-25 18:00:16"
+          },
           {
             "title": "Googleでログインについて",
             "note": "日頃から365sns2をご利用いただきありがとうございます。\r\n近日中に365sns2にGoogleログインを実装します。\r\nよろしくおねがいします。\r\n365sns2 Development Team",
