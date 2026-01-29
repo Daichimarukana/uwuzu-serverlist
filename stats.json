@@ -1,6 +1,6 @@
 {
-  "all_user": 4131,
-  "all_ueuse": 447299,
+  "all_user": 4140,
+  "all_ueuse": 448926,
   "all_server": 3,
   "servers": [
     {
@@ -159,8 +159,8 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 4071,
-            "ueuse": 446131
+            "users": 4080,
+            "ueuse": 447758
           }
         },
         "software": {
@@ -197,7 +197,7 @@
         "server_info": {
           "server_name": "365sns2",
           "server_icon": "",
-          "server_description": "現在登録は受け付けています。 使用ソフトウェアはuwuzuというソフトウェアです。\r\nRe:365sns2",
+          "server_description": "日頃から365sns2のご利用ありがとうございます。\r\n本SNSは過疎化と開発のモチベがはっきり言って無いため、サービス終了をします。\r\nこのお知らせが配信されている時点で、ActivityPubと新規登録は停止されています。\r\n完全なるサービス終了は3月24日付でサービスを停止させていただいきます。\r\n本SNSのサービス終了後はサービス停止画面が表示されますので、ご利用いただけなくなります。\r\nご利用ありがとうございました。",
           "adminstor": {
             "name": "m6qz,ムク",
             "email": "365sns2@gmail.com"
@@ -223,12 +223,6 @@
             "note": "日頃から365sns2のご利用ありがとうございます。\r\n本SNSは過疎化と開発のモチベがはっきり言って無いため、サービス終了をします。\r\nこのお知らせが配信されている時点で、ActivityPubと新規登録は停止されています。\r\n完全なるサービス終了は3月24日付でサービスを停止させていただいきます。\r\n本SNSのサービス終了後はサービス停止画面が表示されますので、ご利用いただけなくなります。\r\nご利用ありがとうございました。",
             "editor": "admin",
             "datetime": "2026-01-25 18:00:16"
-          },
-          {
-            "title": "Googleでログインについて",
-            "note": "日頃から365sns2をご利用いただきありがとうございます。\r\n近日中に365sns2にGoogleログインを実装します。\r\nよろしくおねがいします。\r\n365sns2 Development Team",
-            "editor": "support",
-            "datetime": "2025-12-19 14:37:30"
           },
           {
             "title": "メンテナンスに関して",
