@@ -1,6 +1,6 @@
 {
-  "all_user": 4138,
-  "all_ueuse": 454875,
+  "all_user": 4176,
+  "all_ueuse": 457061,
   "all_server": 3,
   "servers": [
     {
@@ -159,8 +159,8 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 4103,
-            "ueuse": 453795
+            "users": 4116,
+            "ueuse": 455893
           }
         },
         "software": {
@@ -193,8 +193,52 @@
     },
     {
       "domain": "365sns2.f5.si",
-      "data": null,
-      "error": "HTTP 403"
+      "data": {
+        "server_info": {
+          "server_name": "365sns2",
+          "server_icon": "",
+          "server_description": "日頃から365sns2のご利用ありがとうございます。\r\n本SNSは過疎化と開発のモチベがはっきり言って無いため、サービス終了をします。\r\nこのお知らせが配信されている時点で、ActivityPubと新規登録は停止されています。\r\n完全なるサービス終了は3月24日付でサービスを停止させていただいきます。\r\n本SNSのサービス終了後はサービス停止画面が表示されますので、ご利用いただけなくなります。\r\nご利用ありがとうございました。",
+          "adminstor": {
+            "name": "m6qz,ムク",
+            "email": "365sns2@gmail.com"
+          },
+          "terms_url": "https://365sns2.f5.si/rule/terms",
+          "privacy_policy_url": "https://365sns2.f5.si/rule/privacypolicy",
+          "max_ueuse_length": 200,
+          "invitation_code": true,
+          "account_migration": true,
+          "usage": {
+            "users": 25,
+            "ueuse": 88
+          }
+        },
+        "software": {
+          "name": "uwuzu",
+          "version": "1.6.11",
+          "repository": "https://github.com/Daichimarukana/uwuzu"
+        },
+        "server_notice": [
+          {
+            "title": "サービス終了のお知らせ",
+            "note": "日頃から365sns2のご利用ありがとうございます。\r\n本SNSは過疎化と開発のモチベがはっきり言って無いため、サービス終了をします。\r\nこのお知らせが配信されている時点で、ActivityPubと新規登録は停止されています。\r\n完全なるサービス終了は3月24日付でサービスを停止させていただいきます。\r\n本SNSのサービス終了後はサービス停止画面が表示されますので、ご利用いただけなくなります。\r\nご利用ありがとうございました。",
+            "editor": "admin",
+            "datetime": "2026-01-25 18:00:16"
+          },
+          {
+            "title": "メンテナンスに関して",
+            "note": "日頃より365sns2をご利用いただきありがとうございます。\r\nTwitterログインについてなのですが、hCaptchaが無視できてしまうという欠陥が見つかったため、メンテナンスを行います。\r\n日付は以下のとおりです。\r\n2025年12月18日13時から、14時\r\n上記の時間帯でTwitterログインを修正するアプデを入れるため、Twitterログインが機能しません。\r\n大変申し訳ありませんが、ご了承いただけると幸いです。\r\n365sns2 Development Team",
+            "editor": "admin",
+            "datetime": "2025-12-17 23:18:57"
+          },
+          {
+            "title": "Oauthログインを実装！",
+            "note": "本日14:00からtwitterログインを実装します。\r\nなんなら現時点でも実装されていますが、正式実装ではありません。\r\nよろしくお願いします",
+            "editor": "admin",
+            "datetime": "2025-12-17 13:50:26"
+          }
+        ]
+      },
+      "error": null
     }
   ]
 }
