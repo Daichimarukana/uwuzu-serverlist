@@ -1,6 +1,6 @@
 {
-  "all_user": 4208,
-  "all_ueuse": 447061,
+  "all_user": 4218,
+  "all_ueuse": 448655,
   "all_server": 3,
   "servers": [
     {
@@ -159,8 +159,8 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 4148,
-            "ueuse": 445893
+            "users": 4158,
+            "ueuse": 447487
           }
         },
         "software": {
@@ -205,7 +205,7 @@
           "terms_url": "https://365sns2.f5.si/rule/terms",
           "privacy_policy_url": "https://365sns2.f5.si/rule/privacypolicy",
           "max_ueuse_length": 200,
-          "invitation_code": true,
+          "invitation_code": false,
           "account_migration": true,
           "usage": {
             "users": 25,
