@@ -1,6 +1,6 @@
 {
   "all_user": 4560,
-  "all_ueuse": 488614,
+  "all_ueuse": 489792,
   "all_server": 3,
   "servers": [
     {
@@ -160,7 +160,7 @@
           "account_migration": true,
           "usage": {
             "users": 4501,
-            "ueuse": 487434
+            "ueuse": 488612
           }
         },
         "software": {
