@@ -1,6 +1,6 @@
 {
-  "all_user": 4769,
-  "all_ueuse": 524857,
+  "all_user": 4773,
+  "all_ueuse": 525534,
   "all_server": 3,
   "servers": [
     {
@@ -159,8 +159,8 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 4734,
-            "ueuse": 523775
+            "users": 4738,
+            "ueuse": 524452
           }
         },
         "software": {
