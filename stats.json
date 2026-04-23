@@ -1,6 +1,6 @@
 {
-  "all_user": 4777,
-  "all_ueuse": 526054,
+  "all_user": 4785,
+  "all_ueuse": 526715,
   "all_server": 3,
   "servers": [
     {
@@ -21,12 +21,12 @@
           "account_migration": true,
           "usage": {
             "users": 35,
-            "ueuse": 1084
+            "ueuse": 1086
           }
         },
         "software": {
           "name": "uwuzu",
-          "version": "1.6.12",
+          "version": "1.6.13",
           "repository": "https://github.com/Daichimarukana/uwuzu"
         },
         "server_notice": [
@@ -159,13 +159,13 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 4742,
-            "ueuse": 524970
+            "users": 4750,
+            "ueuse": 525629
           }
         },
         "software": {
           "name": "uwuzu",
-          "version": "1.6.12",
+          "version": "1.6.13",
           "repository": "https://github.com/Daichimarukana/uwuzu"
         },
         "server_notice": [
