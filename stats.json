@@ -1,6 +1,6 @@
 {
-  "all_user": 4858,
-  "all_ueuse": 539987,
+  "all_user": 4865,
+  "all_ueuse": 539044,
   "all_server": 3,
   "servers": [
     {
@@ -159,8 +159,8 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 4823,
-            "ueuse": 538833
+            "users": 4830,
+            "ueuse": 537890
           }
         },
         "software": {
@@ -194,7 +194,7 @@
     {
       "domain": "365sns2.f5.si",
       "data": null,
-      "error": "HTTP 403"
+      "error": "Connection Error"
     }
   ]
 }
