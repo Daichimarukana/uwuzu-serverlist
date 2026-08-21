@@ -1,7 +1,7 @@
 {
-  "all_user": 5332,
-  "all_ueuse": 577650,
-  "all_server": 3,
+  "all_user": 5353,
+  "all_ueuse": 578241,
+  "all_server": 4,
   "servers": [
     {
       "domain": "dev.uwuzu.net",
@@ -159,8 +159,8 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 5297,
-            "ueuse": 576497
+            "users": 5306,
+            "ueuse": 577048
           }
         },
         "software": {
@@ -195,6 +195,43 @@
       "domain": "365sns2.f5.si",
       "data": null,
       "error": "Connection Error"
+    },
+    {
+      "domain": "ky-uwuzu.org",
+      "data": {
+        "server_info": {
+          "server_name": "ky-uwuzu",
+          "server_icon": "",
+          "server_description": "K.Yuzenがつくったさーばーです",
+          "adminstor": {
+            "name": "K.Yuzen",
+            "email": "k-yuzen-mail@proton.me"
+          },
+          "terms_url": "https://ky-uwuzu.org/rule/terms",
+          "privacy_policy_url": "https://ky-uwuzu.org/rule/privacypolicy",
+          "max_ueuse_length": 1024,
+          "invitation_code": false,
+          "account_migration": true,
+          "usage": {
+            "users": 12,
+            "ueuse": 40
+          }
+        },
+        "software": {
+          "name": "uwuzu",
+          "version": "1.6.14",
+          "repository": "https://github.com/Daichimarukana/uwuzu"
+        },
+        "server_notice": [
+          {
+            "title": "サーバーができました",
+            "note": "遊んでやってください",
+            "editor": "k_yuzen",
+            "datetime": "2026-08-20 17:01:33"
+          }
+        ]
+      },
+      "error": null
     }
   ]
 }
