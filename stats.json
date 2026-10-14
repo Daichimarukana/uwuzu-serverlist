@@ -1,5 +1,5 @@
 {
-  "all_user": 24,
+  "all_user": 23,
   "all_ueuse": 107,
   "all_server": 4,
   "servers": [
@@ -35,7 +35,7 @@
           "invitation_code": false,
           "account_migration": true,
           "usage": {
-            "users": 24,
+            "users": 23,
             "ueuse": 107
           }
         },
